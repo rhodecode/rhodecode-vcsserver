@@ -110,13 +110,13 @@
     };
   };
   gunicorn = super.buildPythonPackage {
-    name = "gunicorn-19.3.0";
+    name = "gunicorn-19.6.0";
     buildInputs = with self; [];
     doCheck = false;
     propagatedBuildInputs = with self; [];
     src = fetchurl {
-      url = "https://pypi.python.org/packages/b0/3d/c476010c920926d2b5b4be0a9a5f5dc0a50c667476ad4737774d44fa7591/gunicorn-19.3.0.tar.gz";
-      md5 = "faa3e80661efd67e5e06bba32699af20";
+      url = "https://pypi.python.org/packages/84/ce/7ea5396efad1cef682bbc4068e72a0276341d9d9d0f501da609fab9fcb80/gunicorn-19.6.0.tar.gz";
+      md5 = "338e5e8a83ea0f0625f768dba4597530";
     };
   };
   hgsubversion = super.buildPythonPackage {
