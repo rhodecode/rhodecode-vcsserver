@@ -2,8 +2,6 @@ syntax: glob
 *.orig
 *.pyc
 *.swp
-*.sqlite
-*.sqlite-journal
 *.tox
 *.egg-info
 *.egg
@@ -21,7 +19,6 @@ syntax: regexp
 ^\.cache.*$
 ^\.rhodecode$
 
-^rcextensions
 ^_dev
 ^._dev
 ^build/
@@ -35,16 +32,5 @@ syntax: regexp
 ^junit\.xml$
 ^node_modules/
 ^pylint.log$
-^rcextensions/
-^rhodecode/public/css/style.css$
-^rhodecode/public/js/scripts.js$
-^rhodecode\.db$
-^rhodecode\.log$
-^rhodecode_dev\.log$
-^test\.db$
 ^build$
-^coverage\.xml$
-^htmlcov
-^junit\.xml$
-^pylint.log$
 ^result$
