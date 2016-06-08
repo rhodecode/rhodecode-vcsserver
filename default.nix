@@ -64,10 +64,15 @@ let
       pkgs;
   };
 
+  version = builtins.readFile ./vcsserver/VERSION;
+
   pythonLocalOverrides = self: super: {
     rhodecode-vcsserver = super.rhodecode-vcsserver.override (attrs: {
+      inherit
+        doCheck
+        version;
+      name = "rhodecode-vcsserver-${version}";
       src = rhodecode-vcsserver-src;
-      inherit doCheck;
 
       propagatedBuildInputs = attrs.propagatedBuildInputs ++ ([
         pkgs.git
