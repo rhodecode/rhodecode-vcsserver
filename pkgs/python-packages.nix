@@ -120,13 +120,13 @@
     };
   };
   hgsubversion = super.buildPythonPackage {
-    name = "hgsubversion-1.8.5";
+    name = "hgsubversion-1.8.6";
     buildInputs = with self; [];
     doCheck = false;
     propagatedBuildInputs = with self; [mercurial subvertpy];
     src = fetchurl {
-      url = "https://pypi.python.org/packages/f7/8d/3e5719405d4b0b57db7faaf472fb836ed4c437a82bd124a2a37707c33bff/hgsubversion-1.8.5.tar.gz";
-      md5 = "afc3f096fb4dacf1d9210811f81313e0";
+      url = "https://pypi.python.org/packages/ce/97/032e5093ad250e9908cea04395cbddb6902d587f712a79b53b2d778bdfdd/hgsubversion-1.8.6.tar.gz";
+      md5 = "9310cb266031cf8d0779885782a84a5b";
     };
   };
   infrae.cache = super.buildPythonPackage {
