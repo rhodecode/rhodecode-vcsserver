@@ -120,13 +120,13 @@
     };
   };
   hgsubversion = super.buildPythonPackage {
-    name = "hgsubversion-1.8.5";
+    name = "hgsubversion-1.8.6";
     buildInputs = with self; [];
     doCheck = false;
     propagatedBuildInputs = with self; [mercurial subvertpy];
     src = fetchurl {
-      url = "https://pypi.python.org/packages/f7/8d/3e5719405d4b0b57db7faaf472fb836ed4c437a82bd124a2a37707c33bff/hgsubversion-1.8.5.tar.gz";
-      md5 = "afc3f096fb4dacf1d9210811f81313e0";
+      url = "https://pypi.python.org/packages/ce/97/032e5093ad250e9908cea04395cbddb6902d587f712a79b53b2d778bdfdd/hgsubversion-1.8.6.tar.gz";
+      md5 = "9310cb266031cf8d0779885782a84a5b";
     };
   };
   infrae.cache = super.buildPythonPackage {
@@ -140,13 +140,13 @@
     };
   };
   mercurial = super.buildPythonPackage {
-    name = "mercurial-3.7.3";
+    name = "mercurial-3.8.3";
     buildInputs = with self; [];
     doCheck = false;
     propagatedBuildInputs = with self; [];
     src = fetchurl {
-      url = "https://pypi.python.org/packages/e8/a0/fe6bf60a314a30299c58a5ed67de9fffeae04731201f10dc2822befb062d/mercurial-3.7.3.tar.gz";
-      md5 = "f47c9c76b7bf429dafecb71fa81c01b4";
+      url = "https://pypi.python.org/packages/56/bc/af1561195d43638d44bc3ac286c21f187430966234bee1f235711d80dfb6/mercurial-3.8.3.tar.gz";
+      md5 = "97aced7018614eeccc9621a3dea35fda";
     };
   };
   mock = super.buildPythonPackage {
@@ -230,7 +230,7 @@
     };
   };
   rhodecode-vcsserver = super.buildPythonPackage {
-    name = "rhodecode-vcsserver-4.0.0";
+    name = "rhodecode-vcsserver-4.1.0";
     buildInputs = with self; [mock pytest WebTest];
     doCheck = true;
     propagatedBuildInputs = with self; [configobj dulwich hgsubversion infrae.cache mercurial msgpack-python pyramid Pyro4 simplejson subprocess32 waitress WebOb];

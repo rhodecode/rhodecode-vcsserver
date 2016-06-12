@@ -1,9 +1,9 @@
 Beaker==1.7.0
 configobj==5.0.6
 dulwich==0.12.0
-hgsubversion==1.8.5
+hgsubversion==1.8.6
 infrae.cache==1.0.1
-mercurial==3.7.3
+mercurial==3.8.3
 msgpack-python==0.4.6
 py==1.4.29
 pyramid==1.6.1
