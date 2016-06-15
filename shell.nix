@@ -1,8 +1,13 @@
-{ pkgs ? (import <nixpkgs> {})
+{ pkgs ? import <nixpkgs> {}
+,  doCheck ? false
 }:
 
 let
-  vcsserver = import ./default.nix {inherit pkgs;};
+  vcsserver = import ./default.nix {
+    inherit
+      doCheck
+      pkgs;
+  };
 
 in vcsserver.override (attrs: {
 
