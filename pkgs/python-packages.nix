@@ -230,7 +230,7 @@
     };
   };
   rhodecode-vcsserver = super.buildPythonPackage {
-    name = "rhodecode-vcsserver-4.1.0";
+    name = "rhodecode-vcsserver-4.1.2";
     buildInputs = with self; [mock pytest WebTest];
     doCheck = true;
     propagatedBuildInputs = with self; [configobj dulwich hgsubversion infrae.cache mercurial msgpack-python pyramid Pyro4 simplejson subprocess32 waitress WebOb];
