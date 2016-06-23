@@ -57,6 +57,14 @@ def make_ui_from_config(repo_config):
     # signal in a non-main thread, thus generating a ValueError.
     baseui.setconfig('worker', 'numcpus', 1)
 
+    # If there is no config for the largefiles extension, we explicitly disable
+    # it here. This overrides settings from repositories hgrc file. Recent
+    # mercurial versions enable largefiles in hgrc on clone from largefile
+    # repo.
+    if not baseui.hasconfig('extensions', 'largefiles'):
+        log.debug('Explicitly disable largefiles extension for repo.')
+        baseui.setconfig('extensions', 'largefiles', '!')
+
     return baseui
 
 
