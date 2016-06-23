@@ -28,7 +28,7 @@ from beaker.util import parse_cache_config_options
 from pyramid.config import Configurator
 from pyramid.wsgi import wsgiapp
 
-from vcsserver import remote_wsgi, scm_app, settings
+from vcsserver import remote_wsgi, scm_app, settings, hgpatches
 from vcsserver.echo_stub import remote_wsgi as remote_wsgi_stub
 from vcsserver.echo_stub.echo_app import EchoApp
 from vcsserver.server import VcsServer
@@ -331,5 +331,7 @@ class ResponseFilter(object):
 
 
 def main(global_config, **settings):
+    if MercurialFactory:
+        hgpatches.patch_largefiles_capabilities()
     app = HTTPApplication(settings=settings)
     return app.wsgi_app()
