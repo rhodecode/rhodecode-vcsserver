@@ -72,6 +72,7 @@ let
         doCheck
         version;
       name = "rhodecode-vcsserver-${version}";
+      releaseName = "RhodeCodeVCSServer-${version}";
       src = rhodecode-vcsserver-src;
 
       propagatedBuildInputs = attrs.propagatedBuildInputs ++ ([
