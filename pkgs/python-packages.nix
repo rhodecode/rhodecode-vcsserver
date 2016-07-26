@@ -182,13 +182,13 @@
     };
   };
   mercurial = super.buildPythonPackage {
-    name = "mercurial-3.8.3";
+    name = "mercurial-3.8.4";
     buildInputs = with self; [];
     doCheck = false;
     propagatedBuildInputs = with self; [];
     src = fetchurl {
-      url = "https://pypi.python.org/packages/56/bc/af1561195d43638d44bc3ac286c21f187430966234bee1f235711d80dfb6/mercurial-3.8.3.tar.gz";
-      md5 = "97aced7018614eeccc9621a3dea35fda";
+      url = "https://pypi.python.org/packages/bc/16/b66eef0b70ee2b4ebb8e76622fe21bbed834606dd8c1bd30d6936ebf6f45/mercurial-3.8.4.tar.gz";
+      md5 = "cec2c3db688cb87142809089c6ae13e9";
     };
     meta = {
       license = [ pkgs.lib.licenses.gpl1 pkgs.lib.licenses.gpl2Plus ];
@@ -299,7 +299,7 @@
     };
   };
   rhodecode-vcsserver = super.buildPythonPackage {
-    name = "rhodecode-vcsserver-4.2.1";
+    name = "rhodecode-vcsserver-4.3.0";
     buildInputs = with self; [mock pytest WebTest];
     doCheck = true;
     propagatedBuildInputs = with self; [configobj dulwich hgsubversion infrae.cache mercurial msgpack-python pyramid Pyro4 simplejson subprocess32 waitress WebOb];
